@@ -1,0 +1,18 @@
+{
+  "config": {
+    "path": {
+      "img": "/img",
+      "css": "/css",
+      "js": "/js",
+      "ico": "/img/common/favicon.png"
+    },
+    "meta": {
+      "title": "",
+      "keywords": "",
+      "description": "",
+      "og_type": "article",
+      "og_img": "",
+      "og_url": ""
+    }
+  }
+}
