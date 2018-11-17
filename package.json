@@ -11,7 +11,7 @@
     "css": "run-s css:sass css:postcss",
     "css:postcss": "postcss dist/css/*.css --base dist/css/ -d dist/css/ -c postcss.config.js",
     "css:sass": "node-sass src/sass/ -o dist/css/ --output-style expanded --source-map true",
-    "ejs": "ejs-cli -b src/ejs/ **/*.ejs -o dist/ --options ejs.config.json",
+    "ejs": "ejs-cli -b src/ejs/ index.ejs -o dist/ --options ejs.config.json",
     "js": "run-s js:uglify js:concat",
     "js:concat": "mkdirp dist/js && cat src/js/plugins/jquery-3.3.1.min.js src/js/scripts.min.js > dist/js/scripts.min.js",
     "js:uglify": "uglifyjs src/js/scripts.js -o src/js/scripts.min.js -m -c",

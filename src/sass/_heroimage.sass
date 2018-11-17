@@ -1,0 +1,90 @@
+.p-heroimage
+  width: 100%
+  height: 746px
+  background-image: url("/img/quatre_top.jpg")
+  background-position: left top
+  background-repeat: no-repeat
+  background-size: 100% auto
+  position: relative
+  .c-logo
+    position: absolute
+    top: 75px
+    left: 60px
+  .c-nav
+    width: calc(100% - 81px)
+    padding-top: 0
+    display: block
+    position: absolute
+    top: 226px
+    left: 81px
+    li
+      display: table
+      &:nth-child(2)
+        margin: 14px 0 0
+      &:nth-child(3)
+        margin: 18px 0 0
+      &:nth-child(4)
+        margin: 17px 0 0
+      &:nth-child(5)
+        margin: 17px 0 0
+      &:nth-child(6)
+        margin: 19px 0 0
+    a
+      color: #f2ebdf
+      font-size: 19px
+    img
+      margin: 4px 0 0
+  .p-heroimage_sociallink
+    font-size: 19px
+    display: inline-block
+    position: absolute
+    top: 601px
+    left: 84px
+    a
+      transition: opacity .3s ease-out
+      color: #f2ebdf
+      text-decoration: none
+      &:hover
+        opacity: .5
+    span
+      color: #f4aa5a
+  .p-heroimage_reservation
+    font-size: 19px
+    display: inline-block
+    position: absolute
+    top: 670px
+    right: 82px
+    a
+      transition: opacity .3s ease-out
+      color: #f2ebdf
+      text-decoration: none
+      display: block
+      position: relative
+      &:hover
+        opacity: .5
+      &:after
+        content: ""
+        width: 26px
+        height: 26px
+        background-color: #f4aa5a
+        border-radius: 50%
+        display: block
+        position: absolute
+        top: 5px
+        left: -16px
+      span
+        position: relative
+        z-index: 1
+  .p-heroimage_chevron
+    transition: opacity .3s ease-out
+    transform: rotate(45deg)
+    width: 32px
+    height: 32px
+    border-right: 2px solid #fff
+    border-bottom: 2px solid #fff
+    display: block
+    position: absolute
+    bottom: 80px
+    left: calc(50% - 32px / 2)
+    &:hover
+      opacity: .5

@@ -1,0 +1,53 @@
+<div class="c-nav">
+  <ul>
+    <li><a href="#concept">コンセプト
+    <% if(typeof color === 'undefined' || color === 'b') { %>
+      <img src="<%= config.path.img; %>/quatre_concept_b.svg" width="26" alt="Concept">
+    <% } else if(color === 'w') { %>
+      <img src="<%= config.path.img; %>/quatre_concept_w.svg" width="35" alt="Concept">
+    <% } %>
+    </a></li>
+    <li><a href="#codawari">こだわり
+    <% if(typeof color === 'undefined' || color === 'b') { %>
+      <img src="<%= config.path.img; %>/quatre_codawari_b.svg" width="26" alt="Codawari">
+    <% } else if(color === 'w') { %>
+      <img src="<%= config.path.img; %>/quatre_codawari_w.svg" width="45" alt="Codawari">
+    <% } %>
+    </a></li>
+    <li><a href="#menu">メニュー
+    <% if(typeof color === 'undefined' || color === 'b') { %>
+      <img src="<%= config.path.img; %>/quatre_menu_b.svg" width="22" alt="Menu">
+    <% } else if(color === 'w') { %>
+      <img src="<%= config.path.img; %>/quatre_menu_w.svg" width="30" alt="Menu">
+    <% } %>
+    </a></li>
+    <li><a href="#staff">スタッフ
+    <% if(typeof color === 'undefined' || color === 'b') { %>
+      <img src="<%= config.path.img; %>/quatre_staff_b.svg" width="18" alt="Staff">
+    <% } else if(color === 'w') { %>
+      <img src="<%= config.path.img; %>/quatre_staff_w.svg" width="24" alt="Staff">
+    <% } %>
+    </a></li>
+    <li><a href="#photo">写真
+    <% if(typeof color === 'undefined' || color === 'b') { %>
+      <img src="<%= config.path.img; %>/quatre_photo_b.svg" width="21" alt="Photo">
+    <% } else if(color === 'w') { %>
+      <img src="<%= config.path.img; %>/quatre_photo_w.svg" width="29" alt="Photo">
+    <% } %>
+    </a></li>
+    <li><a href="#access">アクセス
+    <% if(typeof color === 'undefined' || color === 'b') { %>
+      <img src="<%= config.path.img; %>/quatre_access_b.svg" width="22" alt="Access">
+    <% } else if(color === 'w') { %>
+      <img src="<%= config.path.img; %>/quatre_access_w.svg" width="31" alt="Access">
+    <% } %>
+    </a></li>
+    <% if(typeof reservation !== 'undefined') { %>
+      <li><a href="#">ご予約</a></li>
+    <% } %>
+    <% if(typeof sociallink !== 'undefined') { %>
+      <li><a href="#"><img src="<%= config.path.img; %>/quatre_icon_instagram.svg" width="19" alt="instagram"></a></li>
+      <li><a href="#"><img src="<%= config.path.img; %>/quatre_icon_facebook.svg" width="9" alt="facebook"></a></li>
+    <% } %>
+  </ul>
+</div>

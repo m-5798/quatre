@@ -1,0 +1,121 @@
+.c-logo
+  width: 161px
+  margin: 0
+  > a
+    display: block
+
+.c-nav
+  box-sizing: border-box
+  width: 100%
+  height: 38px
+  padding-top: 7px
+  display: flex
+  justify-content: center
+  position: relative
+  ul
+    font-size: 0
+    margin: 0 auto
+  li
+    display: inline-block
+    &:nth-child(2)
+      margin-left: 32px
+    &:nth-child(3)
+      margin-left: 33px
+    &:nth-child(4)
+      margin-left: 35px
+    &:nth-child(5)
+      margin-left: 52px
+    &:nth-child(6)
+      margin-left: 46px
+    &:nth-child(7)
+      position: absolute
+      top: 7px
+      right: 230px
+    &:nth-child(8)
+      position: absolute
+      top: 9px
+      right: 68px
+      &:after
+        content: ""
+        transform: rotate(30deg)
+        width: 1px
+        height: 22px
+        background-color: #6f93dc
+        display: block
+        position: absolute
+        top: -1px
+        left: 35px
+    &:nth-child(9)
+      position: absolute
+      top: 9px
+      right: 26px
+  a
+    transition: opacity .3s ease-out
+    color: #000
+    font-size: 13px
+    letter-spacing: 1px
+    text-decoration: none
+    display: block
+    &:hover
+      opacity: .5
+  img
+    margin: 0 auto
+    display: block
+
+.c-heading1
+
+
+.c-flexbox
+  display: flex
+  @for $i from 1 through 12
+    & &_col#{$i}
+      width: #{$i / 12 * 100%}
+  & &_col,
+  & &_col1,
+  & &_col2,
+  & &_col3,
+  & &_col4,
+  & &_col5,
+  & &_col6,
+  & &_col7,
+  & &_col8,
+  & &_col9,
+  & &_col10,
+  & &_col11,
+  & &_col12
+    box-sizing: border-box
+  &#{&}-bordered
+    > .c-flexbox_col:not(:last-of-type),
+    > .c-flexbox_col1:not(:last-of-type),
+    > .c-flexbox_col2:not(:last-of-type),
+    > .c-flexbox_col3:not(:last-of-type),
+    > .c-flexbox_col4:not(:last-of-type),
+    > .c-flexbox_col5:not(:last-of-type),
+    > .c-flexbox_col6:not(:last-of-type),
+    > .c-flexbox_col7:not(:last-of-type),
+    > .c-flexbox_col8:not(:last-of-type),
+    > .c-flexbox_col9:not(:last-of-type),
+    > .c-flexbox_col10:not(:last-of-type),
+    > .c-flexbox_col11:not(:last-of-type),
+    > .c-flexbox_col12:not(:last-of-type)
+      border-right: 1px solid #dcdcdc
+  &#{&}-inline
+    display: inline-flex
+  &#{&}-justifyCenter
+    justify-content: center
+  &#{&}-justifyEnd
+    justify-content: flex-end
+  &#{&}-justifyAround
+    justify-content: space-around
+  &#{&}-justifyBetween
+    justify-content: space-between
+  &#{&}-alignCenter
+    align-items: center
+  &#{&}-alignEnd
+    align-items: flex-end
+  &#{&}-directionColumn
+    flex-direction: column
+  &#{&}-directionRowreverse
+    flex-direction: row-reverse
+  &#{&}-flexWrap
+    flex-wrap: wrap

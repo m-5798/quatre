@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title></title>
-  <link rel="stylesheet" href="/css/style.css">
+<%- include('_meta'); %>
 </head>
 <body>
-xxx
+  <div class="l-wrapper">
+    <header class="l-header">
+      <%- include('_heroimage'); %>
+      <nav>
+        <%- include('_nav', { reservation: true, sociallink: true }); %>
+      </nav>
+    </header>
+    <main class="l-main">
+      <%- include('_concept'); %>
+      <%- include('_codawari'); %>
+      <%- include('_menu'); %>
+      <%- include('_staff'); %>
+      <%- include('_photo'); %>
+      <%- include('_access'); %>
+    </main>
+    <footer class="l-footer">
+      <%- include('_footer'); %>
+    </footer>
+  </div>
 <script src="/js/scripts.min.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
