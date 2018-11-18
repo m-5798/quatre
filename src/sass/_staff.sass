@@ -1,0 +1,59 @@
+.p-staff
+  font-size: 0
+  margin-top: 132px
+  > .c-flexbox
+    padding: 0 80px
+    margin-top: 29px
+    > .c-flexbox_col6
+      &:first-child
+        padding-right: 80px
+      &:last-child
+        padding-left: 80px
+  .p-staffprofile
+    > img
+      margin: 0 auto
+      display: block
+      &:nth-of-type(2)
+        margin-top: 24px
+        border-radius: 50%
+    h2
+      font-size: 19px
+      letter-spacing: 2px
+      text-align: center
+      margin-top: 25px
+    p
+      font-family: $fontFamily_kozuka
+      font-size: 11px
+      line-height: 1
+      text-align: center
+      margin-top: 22px
+    > .c-flexbox
+      font-family: $fontFamily_kozuka
+      font-size: 11px
+      box-sizing: border-box
+      margin-top: 23px
+      .p-staffprofile_dt
+        font-weight: bold
+        width: 21%
+        margin-top: 14px
+        flex-shrink: 0
+        &:first-of-type
+          margin-top: 0
+      .p-staffprofile_dd
+        width: 79%
+        margin-top: 14px
+        &:first-of-type
+          margin-top: 0
+      + .c-flexbox
+        width: 391px
+        padding-top: 14px
+        margin-top: 26px
+        border-top: 1px solid #231815
+        .p-staffprofile_dt
+          width: 48%
+        .p-staffprofile_dd
+          width: 52%
+          + .p-staffprofile_dd
+            margin: 6px 0 0 48%
+  > img
+    margin: 107px 0 0 578px
