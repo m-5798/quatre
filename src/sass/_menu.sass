@@ -1,0 +1,95 @@
+.p-menu
+  font-size: 0
+  margin-top: 102px
+  > .c-flexbox
+    padding: 0 80px
+    &:nth-child(2)
+      height: 546px
+      margin-top: 39px
+      > .c-flexbox_col6
+        &:first-child
+          padding-right: 105px
+          border-right: 1px solid #6f93dc
+        &:last-child
+          padding-left: 80px
+      > .c-flexbox_col6:first-child .p-menu_table:nth-child(2) .p-menu_items > .c-flexbox_col9:nth-of-type(5),
+      > .c-flexbox_col6:first-child .p-menu_table:nth-child(2) .p-menu_items > .c-flexbox_col9:nth-of-type(5) + .c-flexbox_col3,
+      > .c-flexbox_col6:first-child .p-menu_table:nth-child(4) .p-menu_items > .c-flexbox_col9:nth-of-type(2),
+      > .c-flexbox_col6:first-child .p-menu_table:nth-child(4) .p-menu_items > .c-flexbox_col9:nth-of-type(2) + .c-flexbox_col3,
+      > .c-flexbox_col6:last-child .p-menu_table:nth-child(1) .p-menu_items > .c-flexbox_col9:nth-of-type(2),
+      > .c-flexbox_col6:last-child .p-menu_table:nth-child(1) .p-menu_items > .c-flexbox_col9:nth-of-type(2) + .c-flexbox_col3
+        margin-top: 4px
+  .p-menu_table
+    margin-top: 31px
+    &:first-child
+      margin-top: 0
+    >.c-flexbox_col:nth-child(2)
+      flex-grow: 1
+  .p-menu_heading
+    font-size: 19px
+    letter-spacing: 2px
+    width: 35%
+    margin: 0
+    flex-shrink: 0
+    > img
+      margin-top: 6px
+      display: block
+    &.p-menu_heading-lsminus1
+      letter-spacing: -1px
+  .p-menu_items
+    font-family: $fontFamily_kozuka
+    font-size: 12px
+    > .c-flexbox_col9
+      margin-top: 17px
+      flex-shrink: 0
+      &:first-of-type
+        margin-top: 0
+      span
+        font-size: 8px
+        white-space: nowrap
+    > .c-flexbox_col6
+      font-size: 8px
+      > .c-flexbox
+        margin: 2px -2px 0
+    > .c-flexbox_col3
+      text-align: right
+      margin-top: 17px
+      &:first-of-type
+        margin-top: 0
+  .p-menu_passport
+    padding: 22px 27px 8px 9px
+    margin: 34px -27px 0 -9px
+    border: 1px solid #6f93dc
+    position: relative
+    &:before,
+    &:after
+      content: ""
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 24px 0 0 30px
+      position: absolute
+    &:before
+      transform: scale(0.83)
+      border-color: transparent transparent transparent #f2ebdf
+      top: 0
+      right: 0
+      z-index: 1
+    &:after
+      background-color: #f2ebdf
+      border-color: transparent transparent transparent #6f93dc
+      top: -1px
+      right: -1px
+    .p-menu_heading
+      color: #f4aa5a
+      img,
+      + .c-flexbox_col
+        margin-top: 4px
+  .p-menu_annotation
+    font-family: $fontFamily_kozuka
+    font-size: 8px
+    margin-top: 19px
+    li
+      margin-top: 11px
+  > img
+    margin: 110px 0 0 254px

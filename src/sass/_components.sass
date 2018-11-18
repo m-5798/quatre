@@ -63,9 +63,28 @@
     display: block
 
 .c-heading1
+  font-size: 27px
+  margin: .8em 0
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+  &:after
+    content: ""
+    width: 75px
+    height: 75px
+    background-color: #f4aa5a
+    border-radius: 50%
+    position: absolute
+  span
+    letter-spacing: 3px
+    position: relative
+    z-index: 1
+
 
 
 .c-flexbox
+  box-sizing: border-box
   display: flex
   @for $i from 1 through 12
     & &_col#{$i}
