@@ -1,0 +1,40 @@
+.p-footer
+  font-size: 0
+  text-align: center
+  padding: 226px 0 108px
+  margin-top: 60px
+  position: relative
+  > div
+    width: 75px
+    height: 75px
+    position: absolute
+    top: 0
+    right: 80px
+    > a
+      transition: opacity .3s ease-out
+      width: 100%
+      height: 100%
+      background-color: #f4aa5a
+      border-radius: 50%
+      display: flex
+      justify-content: center
+      align-items: center
+      &:hover
+        opacity: .5
+      &:before
+        content: ""
+        transform: rotate(-45deg)
+        width: 31px
+        height: 31px
+        margin-top: 20%
+        border-top: 1px solid #fff
+        border-right: 1px solid #fff
+        display: block
+  > p
+    font-size: 12px
+    line-height: 1
+    margin: 142px 0 0
+    span
+      font-size: 24px
+      line-height: 0
+      vertical-align: middle
