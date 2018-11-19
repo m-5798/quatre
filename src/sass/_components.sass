@@ -65,7 +65,8 @@
 
 .c-heading1
   font-size: 27px
-  margin: .8em 0
+  height: 75px
+  margin: 0
   display: flex
   justify-content: center
   align-items: center
@@ -82,14 +83,13 @@
     position: relative
     z-index: 1
 
-
-
 .c-flexbox
   box-sizing: border-box
   display: flex
   @for $i from 1 through 12
     & &_col#{$i}
       width: #{$i / 12 * 100%}
+      flex-basis: #{$i / 12 * 100%}
   & &_col,
   & &_col1,
   & &_col2,
@@ -139,3 +139,39 @@
     flex-direction: row-reverse
   &#{&}-flexWrap
     flex-wrap: wrap
+
+.c-tabs
+  .c-tabs_toggles
+    display: flex
+    > .c-tabs_toggle
+      transition: opacity .3s ease-out, border-bottom-color .3s ease-out
+      font-size: 19px
+      font-weight: bold
+      letter-spacing: 2px
+      line-height: 1
+      box-sizing: border-box
+      padding-bottom: 4px
+      margin: 0 1em
+      border-bottom: 2px solid transparent
+      cursor: pointer
+      &:hover
+        opacity: .5
+      &.c-tabs_toggle-active
+        border-bottom-color: #6f93dc
+  .c-tabs_contents
+    margin-top: 43px
+    position: relative
+    > .c-tabs_content
+      transition: opacity .3s ease-out
+      position: absolute
+      top: 0
+      left: 0
+      opacity: 0
+      z-index: 0
+      pointer-events: none
+      &.c-tabs_content-active
+        position: relative
+        opacity: 1
+        z-index: 1
+        pointer-events: auto
+

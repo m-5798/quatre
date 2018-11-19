@@ -1,0 +1,59 @@
+@keyframes showphoto
+  0%
+    transform: scale(.5)
+    opacity: 0
+  100%
+    transform: scale(1)
+    opacity: 1
+
+.p-photo
+  font-size: 0
+  margin-top: 162px
+  position: relative
+  .c-heading1
+    position: absolute
+    top: -32px
+    left: 80px
+  .c-tabs
+    padding: 0 80px
+    .c-tabs_toggles
+      margin-left: 125px
+      > .c-tabs_toggle
+        margin: 0
+        &:nth-child(2)
+          margin-left: 70px
+        &:nth-child(3)
+          margin-left: 67px
+        &:nth-child(4)
+          margin-left: 54px
+    .c-tabs_contents
+      > .c-tabs_content
+        > .c-flexbox > .c-flexbox_col img
+          width: 100%
+          display: none
+          opacity: 0
+        @for $i from 1 through 10
+          $s: #{.08 * $i}s
+          > .c-flexbox > .c-flexbox_col:nth-child(#{$i}) img
+            animation: showphoto .4s ease-out $s
+            animation-fill-mode: forwards
+        &.c-tabs_content-active > .c-flexbox > .c-flexbox_col img
+          display: block
+        @for $i from 1 through 4
+          $gutter: 0
+          $width: 0
+          @if $i == 1
+            $gutter: 26px
+            $width: 260px
+          @if $i == 2 or $i == 3
+            $gutter: 30px
+            $width: 188px
+          @if $i == 4
+            $gutter: 30px
+            $width: 300px
+          &:nth-child(#{$i}) > .c-flexbox
+            margin: 0 (-$gutter / 2)
+            > .c-flexbox_col
+              width: $width + $gutter
+              padding: 0 ($gutter / 2) $gutter
+
