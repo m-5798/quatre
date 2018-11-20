@@ -25,9 +25,21 @@ if (typeof Site === 'undefined') {
       });
     };
 
+    S.scroll = function() {
+      $('a[href^="#"]').click(function() {
+        var speed = 400
+          , href= $(this).attr('href')
+          , target = $(href == '#' || href == '' ? 'html' : href)
+          , position = target.offset().top;
+        $('body, html').animate({scrollTop:position}, speed, 'swing');
+        return false;
+      });
+    };
+
   })(Site, window);
 }
 
 $(function() {
   Site.tabs();
+  Site.scroll();
 });
