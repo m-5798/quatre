@@ -39,7 +39,22 @@ if (typeof Site === 'undefined') {
   })(Site, window);
 }
 
-$(function() {
+$(document).ready(function () {
+
   Site.tabs();
   Site.scroll();
+  var mySwiper = new Swiper ('.swiper-container', {
+    centeredSlides: true,
+    loop: false,
+    navigation: {
+      prevEl: '.p-codawari_swiperBtn-prev',
+      nextEl: '.p-codawari_swiperBtn-next',
+    },
+    slidesPerView: 'auto',
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+  });
+
 });
