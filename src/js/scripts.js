@@ -47,8 +47,8 @@ $(document).ready(function () {
     centeredSlides: true,
     loop: false,
     navigation: {
-      prevEl: '.p-codawari_swiperBtn-prev',
-      nextEl: '.p-codawari_swiperBtn-next',
+      prevEl: '.p-kodawari_swiperBtn-prev',
+      nextEl: '.p-kodawari_swiperBtn-next',
     },
     slidesPerView: 'auto',
     autoplay: {

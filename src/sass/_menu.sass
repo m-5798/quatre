@@ -1,6 +1,7 @@
 .p-menu
   font-size: 0
-  margin-top: 114px
+  width: 100%
+  margin: 114px auto 0
   background-image: url("/img/quatre_menu.svg")
   background-position: 515px 283px
   background-repeat: no-repeat
@@ -9,13 +10,13 @@
     padding: 0 80px
     &:nth-child(2)
       height: 546px
-      margin-top: 39px
+      margin-top: 40px
       > .c-flexbox_col6
         &:first-child
           padding-right: 105px
-          border-right: 1px solid #6f93dc
         &:last-child
-          padding-left: 80px
+          padding-left: 81px
+          border-left: 1px solid #6f93dc
       > .c-flexbox_col6:first-child .p-menu_table:nth-child(2) .p-menu_items > .c-flexbox_col9:nth-of-type(5),
       > .c-flexbox_col6:first-child .p-menu_table:nth-child(2) .p-menu_items > .c-flexbox_col9:nth-of-type(5) + .c-flexbox_col3,
       > .c-flexbox_col6:first-child .p-menu_table:nth-child(4) .p-menu_items > .c-flexbox_col9:nth-of-type(2),
@@ -50,6 +51,7 @@
         margin-top: 0
       span
         font-size: 8px
+        letter-spacing: 0
         white-space: nowrap
     > .c-flexbox_col6
       font-size: 8px
@@ -95,5 +97,12 @@
     margin-top: 19px
     li
       margin-top: 8px
-  > img
-    margin: 110px 0 0 254px
+  & &_img
+    box-sizing: border-box
+    width: 100%
+    padding-left: 254px
+    margin: 110px auto 0
+
+@media screen and (min-width:1281px)
+  .p-menu
+    width: 1280px

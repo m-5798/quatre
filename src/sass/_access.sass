@@ -1,13 +1,16 @@
 .p-access
   font-size: 0
-  margin-top: 140px
+  width: 100%
+  margin: 183px auto 0
   background-image: url("/img/quatre_access.svg")
-  background-position: 73px 0
+  background-position: 73px top
   background-repeat: no-repeat
   background-size: 246px 79px
   > .c-flexbox
-    padding: 0 80px
     margin-top: 63px
+    > .c-flexbox_col6:nth-child(1)
+      text-align: right
+      padding-right: 99px
     > .c-flexbox_col6:nth-child(2)
       letter-spacing: 2px
       .c-flexbox_col
@@ -43,3 +46,7 @@
         &:last-child
           line-height: 1
           margin-top: 30px
+
+@media screen and (min-width:1281px)
+  .p-access
+    width: 1280px

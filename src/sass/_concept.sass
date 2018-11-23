@@ -1,6 +1,7 @@
 .p-concept
   font-size: 0
-  margin-top: 102px
+  width: 100%
+  margin: 102px auto 0
   background-image: url("/img/quatre_concept.svg")
   background-position: 775px 284px
   background-repeat: no-repeat
@@ -9,20 +10,26 @@
     padding: 0 80px
     > .c-flexbox_col6:nth-child(1)
       text-align: center
-      margin-right: 10px
+      padding-left: 46px
+      .c-heading1
+        margin-left: -30px
       > img
-        margin-top: 44px
+        margin: 44px 0 0 -20px
       > p:nth-of-type(1)
         font-size: 12px
         font-weight: bold
         letter-spacing: 3px
         line-height: 37px
-        margin: 90px 0 0 25px
+        margin-top: 90px
       > p:nth-of-type(2)
         font-size: 8px
         font-family: $fontFamily_kozuka
         line-height: 16px
-        margin: 34px 0 0 25px
+        margin-top: 34px
     > .c-flexbox_col6:nth-child(2)
-      > img
-        margin-left: 80px
+      text-align: right
+      padding-right: 109px
+
+@media screen and (min-width:1281px)
+  .p-concept
+    width: 1280px

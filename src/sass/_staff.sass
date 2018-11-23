@@ -1,20 +1,48 @@
 .p-staff
   font-size: 0
-  margin-top: 110px
+  width: 100%
+  margin: 110px auto 0
   background-image: url("/img/quatre_staff.svg")
-  background-position: 547px 267px
+  background-position: center 267px
   background-repeat: no-repeat
   background-size: 190px 96px
   > .c-flexbox
-    padding: 0 80px
     margin-top: 7px
-    > .c-flexbox_col6
-      &:first-child
-        padding-right: 80px
-      &:last-child
-        padding-left: 80px
-  .p-staffprofile
-    > img
+    > .c-flexbox_col6:nth-child(1)
+      > .p-staff_name
+        margin-left: 161px
+      > .p-staff_description1
+        margin-right: 168px
+        margin-left: 80px
+        > .c-flexbox_col:nth-child(odd)
+          width: 26%
+        > .c-flexbox_col:nth-child(even)
+          width: 74%
+      > .p-staff_description2
+        margin-right: 168px
+        margin-left: 80px
+        > .c-flexbox_col:nth-child(1),
+        > .c-flexbox_col:nth-child(5)
+          width: 47%
+        > .c-flexbox_col:nth-child(3),
+        > .c-flexbox_col:nth-child(4)
+          width: 100%
+          padding-left: 47%
+        > .c-flexbox_col:nth-child(2),
+        > .c-flexbox_col:nth-child(6)
+          width: 53%
+    > .c-flexbox_col6:nth-child(2)
+      > .p-staff_name
+        margin-left: 159px
+      > .p-staff_description1
+        margin-left: 82px
+        > .c-flexbox_col:nth-child(odd)
+          width: 18%
+        > .c-flexbox_col:nth-child(even)
+          width: 82%
+  .p-staff_name
+    display: table
+    img
       margin: 0 auto
       display: block
       &:nth-of-type(2)
@@ -24,40 +52,41 @@
       font-size: 19px
       letter-spacing: 2px
       text-align: center
-      margin-top: 25px
+      margin: 25px 0 0
     p
       font-family: $fontFamily_kozuka
       font-size: 11px
       line-height: 1
       text-align: center
-      margin-top: 22px
-    > .c-flexbox
-      font-family: $fontFamily_kozuka
-      font-size: 11px
-      box-sizing: border-box
-      margin-top: 23px
-      .p-staffprofile_dt
-        font-weight: bold
-        width: 21%
-        margin-top: 14px
-        flex-shrink: 0
-        &:first-of-type
-          margin-top: 0
-      .p-staffprofile_dd
-        width: 79%
-        margin-top: 14px
-        &:first-of-type
-          margin-top: 0
-      + .c-flexbox
-        width: 391px
-        padding-top: 14px
-        margin-top: 26px
-        border-top: 1px solid #231815
-        .p-staffprofile_dt
-          width: 48%
-        .p-staffprofile_dd
-          width: 52%
-          + .p-staffprofile_dd
-            margin: 6px 0 0 48%
-  > img
-    margin: 107px 0 0 578px
+      margin: 21px 0 0
+  .p-staff_description1,
+  .p-staff_description2
+    font-family: $fontFamily_kozuka
+    font-size: 11px
+    box-sizing: border-box
+    > .c-flexbox_col
+      margin-top: 14px
+      &:first-of-type
+        margin-top: 0
+  .p-staff_description1
+    margin-top: 23px
+    > .c-flexbox_col:nth-child(odd)
+      font-weight: bold
+  .p-staff_description2
+    padding-top: 15px
+    margin-top: 26px
+    border-top: 1px solid #231815
+    > .c-flexbox_col:nth-child(1),
+    > .c-flexbox_col:nth-child(5)
+      font-weight: bold
+  & &_img
+    box-sizing: border-box
+    text-align: right
+    width: 100%
+    padding-right: 132px
+    margin: 107px auto 0
+
+@media screen and (min-width:1281px)
+  .p-staff
+    width: 1280px
+

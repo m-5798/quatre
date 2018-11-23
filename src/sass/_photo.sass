@@ -8,9 +8,11 @@
 
 .p-photo
   font-size: 0
-  margin-top: 130px
+  width: 100%
+  padding-top: 3px
+  margin: 127px auto 0
   background-image: url("/img/quatre_photo.svg")
-  background-position: 944px 0
+  background-position: 944px top
   background-repeat: no-repeat
   background-size: 236px 81px
   position: relative
@@ -18,9 +20,8 @@
     padding-left: 80px
     flex-shrink: 0
   .c-tabs
-    padding: 0 80px
-    position: relative
-    top: -43px
+    width: 1120px
+    margin: -43px auto 0
     .c-tabs_toggles
       margin-left: 125px
       > .c-tabs_toggle
@@ -62,3 +63,6 @@
               width: $width + $gutter
               padding: 0 ($gutter / 2) $gutter
 
+@media screen and (min-width:1281px)
+  .p-photo
+    width: 1280px
