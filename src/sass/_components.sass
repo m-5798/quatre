@@ -14,56 +14,61 @@
   display: flex
   justify-content: center
   position: relative
-  ul
-    font-size: 0
-    margin: 0 auto
-  li
-    display: inline-block
-    &:nth-child(2)
-      margin-left: 32px
-    &:nth-child(3)
-      margin-left: 33px
-    &:nth-child(4)
-      margin-left: 35px
-    &:nth-child(5)
-      margin-left: 52px
-    &:nth-child(6)
-      margin-left: 46px
-    &:nth-child(7)
-      position: absolute
-      top: 7px
-      right: 230px
-    &:nth-child(8)
-      position: absolute
-      top: 9px
-      right: 68px
-      &:after
-        content: ""
-        transform: rotate(30deg)
-        width: 1px
-        height: 22px
-        background-color: #6f93dc
-        display: block
+  .c-nav_toggle
+    display: none
+  .c-nav_items
+    ul
+      font-size: 0
+      margin: 0 auto
+    li
+      display: inline-block
+      &:nth-child(2)
+        margin-left: 32px
+      &:nth-child(3)
+        margin-left: 33px
+      &:nth-child(4)
+        margin-left: 35px
+      &:nth-child(5)
+        margin-left: 52px
+      &:nth-child(6)
+        margin-left: 46px
+      &:nth-child(7)
         position: absolute
-        top: -1px
-        left: 35px
-    &:nth-child(9)
-      position: absolute
-      top: 9px
-      right: 26px
-  a
-    transition: opacity .3s ease-out
-    color: #000
-    font-size: 13px
-    font-weight: bold
-    letter-spacing: 2px
-    text-decoration: none
-    display: block
-    &:hover
-      opacity: .5
-  img
-    margin: 0 auto
-    display: block
+        top: 7px
+        right: 230px
+      &:nth-child(8)
+        position: absolute
+        top: 9px
+        right: 68px
+        &:after
+          content: ""
+          transform: rotate(30deg)
+          width: 1px
+          height: 22px
+          background-color: #6f93dc
+          display: block
+          position: absolute
+          top: -1px
+          left: 20px
+      &:nth-child(9)
+        position: absolute
+        top: 9px
+        right: 26px
+    a
+      transition: opacity .3s ease-out
+      color: #000
+      font-size: 13px
+      font-weight: bold
+      letter-spacing: 2px
+      text-decoration: none
+      display: block
+      &:hover
+        opacity: .5
+    img
+      margin: 0 auto
+      display: block
+    span
+      display: none
 
 .c-heading1
   font-size: 27px
@@ -177,3 +182,164 @@
         z-index: 1
         pointer-events: auto
 
+// PC
+@media print, screen and (min-width: $breakPoint + 1)
+  .c-visible-sp
+    display: none
+
+
+// SP
+@media screen and (max-width: $breakPoint)
+  .c-nav
+    transition: width 0s .5s, height 0s .5s
+    width: 48px
+    height: 52px
+    padding-top: 0
+    position: fixed
+    top: 0
+    right: 0
+    z-index: 2
+    overflow: hidden
+    .c-nav_toggle
+      transition: transform .3s ease-out
+      width: 36px
+      height: 24px
+      display: flex
+      justify-content: space-between
+      flex-direction: column
+      position: absolute
+      top: 28px
+      right: 12px
+      z-index: 3
+      &:before,
+      &:after,
+      span
+        transition: background-color .3s ease-out, opacity .3s ease-out, transform .3s ease-out
+        content: ""
+        width: 100%
+        height: 2px
+        background-color: #fff
+        box-shadow: 0 1px 2px rgba(#000, .2)
+        display: block
+        opacity: 1
+      &:before
+        transform-origin: 100% 0
+      &:after
+        transform-origin: 100% 100%
+    .c-nav_items
+      transition: opacity .4s 0s ease-out, transform .4s ease-out
+      box-sizing: border-box
+      width: 100%
+      height: 100%
+      padding: 40px 0
+      background-color: #f2ebdf
+      display: flex
+      justify-content: center
+      align-items: center
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 2
+      overflow-y: auto
+      opacity: 0
+      transform: translateX(100%)
+      ul
+        min-height: 410px
+        margin-top: -70px
+        position: relative
+      li
+        text-align: center
+        display: block
+        &:nth-child(1)
+          margin: 0 auto
+          img
+            width: 36px
+            margin-top: 4px
+        &:nth-child(2)
+          margin: 15px auto 0
+          img
+            width: 45px
+        &:nth-child(3)
+          margin: 19px auto 0
+          img
+            width: 31px
+        &:nth-child(4)
+          margin: 18px auto 0
+          img
+            width: 24px
+        &:nth-child(5)
+          margin: 17px auto 0
+          img
+            width: 29px
+        &:nth-child(6)
+          margin: 19px auto 0
+          img
+            width: 31px
+        &:nth-child(7)
+          margin: 0
+          top: 395px
+          right: auto
+          left: 23px
+          a
+            position: relative
+            z-index: 1
+          &:after
+            content: ""
+            width: 26px
+            height: 26px
+            background-color: #f4aa5a
+            border-radius: 50%
+            display: block
+            position: absolute
+            top: 4px
+            left: -14px
+        &:nth-child(8)
+          margin-left: -65px
+          top: 330px
+          right: auto
+          img
+            display: none
+          &:after
+            background-color: #f4aa5a
+            right: -15px
+            left: auto
+        &:nth-child(9)
+          margin-left: 65px
+          top: 330px
+          right: auto
+          img
+            display: none
+      a
+        color: #000
+        font-size: 17px
+        letter-spacing: 2px
+      img
+        margin-top: 4px
+      span
+        display: inline
+    &#{&}-open
+      transition: width 0s, height 0s
+      width: 100%
+      height: 100vh
+      .c-nav_toggle
+        &:before
+          transform: rotate(-39deg)
+          background-color: #000
+        &:after
+          transform: rotate(39deg)
+          background-color: #000
+        span
+          opacity: 0
+      .c-nav_items
+        transition: opacity .4s .1s ease-out, transform .4s ease-out
+        opacity: 1
+        transform: translateX(0)
+
+  .c-visible-pc
+    display: none !important
+
+@media screen and (max-height: 440px)
+  .c-nav .c-nav_items
+    align-items: normal
+    ul
+      margin-top: 0

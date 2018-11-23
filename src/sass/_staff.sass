@@ -90,3 +90,82 @@
   .p-staff
     width: 1280px
 
+// SP
+@media screen and (max-width: $breakPoint)
+  .p-staff
+    box-sizing: border-box
+    padding: 0 34px
+    margin-top: 105px
+    background-image: none
+    > .c-flexbox
+      margin-top: 0
+      display: block
+      > .c-flexbox_col6:nth-child(1)
+        width: 100%
+        > .p-staff_name
+          margin: 56px auto 0
+          img:nth-of-type(1)
+            width: 231px
+          img:nth-of-type(2)
+            width: 190px
+            margin-top: 25px
+          h2
+            margin-top: 33px
+          p
+            margin-top: 17px
+        > .p-staff_description1
+          max-width: 400px
+          margin: 22px auto 0
+          > .c-flexbox_col:nth-child(odd)
+            width: 100px
+          > .c-flexbox_col:nth-child(even)
+            line-height: 1.4
+            width: calc(100% - 100px)
+        > .p-staff_description2
+          max-width: 400px
+          margin: 26px auto 0
+          display: block
+          > .c-flexbox_col:nth-child(1),
+          > .c-flexbox_col:nth-child(2),
+          > .c-flexbox_col:nth-child(3),
+          > .c-flexbox_col:nth-child(4),
+          > .c-flexbox_col:nth-child(5),
+          > .c-flexbox_col:nth-child(6)
+            width: 100%
+            padding-left: 0
+          > .c-flexbox_col:nth-child(2),
+          > .c-flexbox_col:nth-child(6)
+            margin-top: 12px
+          > .c-flexbox_col:nth-child(3),
+          > .c-flexbox_col:nth-child(4)
+            margin-top: 7px
+          > .c-flexbox_col:nth-child(5)
+            margin-top: 22px
+      > .c-flexbox_col6:nth-child(2)
+        width: 100%
+        > .p-staff_name
+          margin: 70px auto 0
+          img:nth-of-type(1)
+            width: 146px
+          img:nth-of-type(2)
+            width: 190px
+            margin-top: 24px
+          h2
+            margin-top: 30px
+          p
+            margin-top: 17px
+        > .p-staff_description1
+          max-width: 400px
+          margin: 22px auto 0
+          > .c-flexbox_col:nth-child(odd)
+            width: 100px
+          > .c-flexbox_col:nth-child(even)
+            line-height: 1.4
+            width: calc(100% - 100px)
+          > .c-flexbox_col:nth-child(n+3)
+            margin-top: 16px
+    & &_img
+      padding: 0
+      margin: 112px 0 0
+      img
+        width: 240px

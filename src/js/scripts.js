@@ -5,6 +5,31 @@ if (typeof Site === 'undefined') {
 
     var d = W.document;
 
+    S.nav = function() {
+      var nav_class = '.c-nav'
+        , nav_items = '.c-nav_items'
+        , open_class = 'c-nav-open'
+        , $body = $(d.body)
+        , $toggle = $('.c-nav_toggle')
+        , $nav_items = $(nav_class).find(nav_items + ' li > a')
+        ;
+      $($toggle.add($nav_items)).on('click', function() {
+        var $nav = $(this).closest(nav_class)
+          , is_open = false
+          ;
+        $nav.toggleClass(open_class);
+        is_open = $nav.hasClass(open_class);
+        $body.css({
+          'height': is_open ? '100%': '',
+          'overflow': is_open ? 'hidden': '',
+        });
+        $(W).on('touchmove', function(evt) {
+          if(is_open) evt.preventDefault();
+        });
+        if(!is_open) $(W).off('touchmove');
+      });
+    };
+
     S.tabs = function() {
       var tabs = '[data-qt-tabs]'
         , toggles = '[data-qt-toggles]'
@@ -25,7 +50,7 @@ if (typeof Site === 'undefined') {
       });
     };
 
-    S.scroll = function() {
+    S.anchorScroll = function() {
       $('a[href^="#"]').click(function() {
         var speed = 400
           , href= $(this).attr('href')
@@ -41,8 +66,9 @@ if (typeof Site === 'undefined') {
 
 $(document).ready(function () {
 
+  Site.nav();
   Site.tabs();
-  Site.scroll();
+  Site.anchorScroll();
   var mySwiper = new Swiper ('.swiper-container', {
     centeredSlides: true,
     loop: false,

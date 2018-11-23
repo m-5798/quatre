@@ -38,7 +38,7 @@
           width: 100%
           display: none
           opacity: 0
-        @for $i from 1 through 10
+        @for $i from 1 through 20
           $s: #{.08 * $i}s
           > .c-flexbox > .c-flexbox_col:nth-child(#{$i}) img
             animation: showphoto .4s ease-out $s
@@ -66,3 +66,46 @@
 @media screen and (min-width:1281px)
   .p-photo
     width: 1280px
+
+// SP
+@media screen and (max-width: $breakPoint)
+  .p-photo
+    padding-top: 0
+    margin-top: 111px
+    background-image: none
+    > .c-flexbox
+      display: block
+      > .c-flexbox_col
+        padding: 0
+    .c-tabs
+      box-sizing: border-box
+      width: 100%
+      padding: 0 34px
+      margin: 45px auto 0
+      .c-tabs_toggles
+        max-width: 400px
+        margin: 0 auto
+        justify-content: space-between
+        > .c-tabs_toggle
+          font-size: 14px
+          margin: 0
+          &:nth-child(2)
+            margin-left: 0
+          &:nth-child(3)
+            margin-left: 0
+          &:nth-child(4)
+            margin-left: 0
+      .c-tabs_contents
+        margin-top: 32px
+        > .c-tabs_content
+          @for $i from 1 through 4
+            $gutter: 15px
+            $width: 146px
+            @if $i == 4
+              $gutter: 30px
+              $width: 300px
+            &:nth-child(#{$i}) > .c-flexbox
+              margin: 0 (-$gutter / 2) (-$gutter)
+              > .c-flexbox_col
+                width: $width + $gutter
+                padding: 0 ($gutter / 2) $gutter

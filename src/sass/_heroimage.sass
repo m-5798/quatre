@@ -17,24 +17,25 @@
     position: absolute
     top: 226px
     left: 81px
-    li
-      display: table
-      &:nth-child(2)
-        margin: 14px 0 0
-      &:nth-child(3)
-        margin: 18px 0 0
-      &:nth-child(4)
-        margin: 17px 0 0
-      &:nth-child(5)
-        margin: 17px 0 0
-      &:nth-child(6)
-        margin: 19px 0 0
-    a
-      color: #f2ebdf
-      font-size: 19px
-      font-weight: normal
-    img
-      margin: 4px 0 0
+    .c-nav_items
+      li
+        display: table
+        &:nth-child(2)
+          margin: 14px 0 0
+        &:nth-child(3)
+          margin: 18px 0 0
+        &:nth-child(4)
+          margin: 17px 0 0
+        &:nth-child(5)
+          margin: 17px 0 0
+        &:nth-child(6)
+          margin: 19px 0 0
+      a
+        color: #f2ebdf
+        font-size: 19px
+        font-weight: normal
+      img
+        margin: 4px 0 0
   .p-heroimage_sociallink
     font-size: 19px
     display: inline-block
@@ -91,3 +92,24 @@
     left: calc(50% - 32px / 2)
     &:hover
       opacity: .5
+
+// SP
+@media screen and (max-width: $breakPoint)
+  .p-heroimage
+    height: 100vh
+    background-position: center top
+    background-size: cover
+    .c-logo
+      width: 100%
+      height: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      position: static
+      img
+        width: 190px
+        filter: drop-shadow(0 2px 3px rgba(#000, .2))
+    .c-nav,
+    .p-heroimage_sociallink,
+    .p-heroimage_reservation
+      display: none

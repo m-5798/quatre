@@ -106,3 +106,64 @@
 @media screen and (min-width:1281px)
   .p-menu
     width: 1280px
+
+// SP
+@media screen and (max-width: $breakPoint)
+  .p-menu
+    box-sizing: border-box
+    padding: 0 34px
+    margin-top: 121px
+    background-image: none
+    > .c-flexbox
+      padding: 0
+      display: block
+      > .c-flexbox_col6
+        width: 100%
+        max-width: 400px
+        margin: 0 auto
+      &:nth-child(2)
+        height: auto
+        > .c-flexbox_col6:first-child
+          padding-right: 0
+        > .c-flexbox_col6:last-child
+          padding-left: 0
+          border-left: 0 none transparent
+        > .c-flexbox_col6:first-child .p-menu_table:nth-child(2) .p-menu_items > .c-flexbox_col9:nth-of-type(5),
+        > .c-flexbox_col6:first-child .p-menu_table:nth-child(2) .p-menu_items > .c-flexbox_col9:nth-of-type(5) + .c-flexbox_col3,
+        > .c-flexbox_col6:first-child .p-menu_table:nth-child(4) .p-menu_items > .c-flexbox_col9:nth-of-type(2),
+        > .c-flexbox_col6:first-child .p-menu_table:nth-child(4) .p-menu_items > .c-flexbox_col9:nth-of-type(2) + .c-flexbox_col3,
+        > .c-flexbox_col6:last-child .p-menu_table:nth-child(1) .p-menu_items > .c-flexbox_col9:nth-of-type(2),
+        > .c-flexbox_col6:last-child .p-menu_table:nth-child(1) .p-menu_items > .c-flexbox_col9:nth-of-type(2) + .c-flexbox_col3
+          margin-top: 17px
+    .p-menu_table
+      display: block
+      margin-top: 38px
+      &:first-child
+        margin-top: 38px
+    .p-menu_heading
+      font-size: 13px
+      width: 100%
+      > img
+        margin: 0 0 0 15px
+        display: inline-block
+    .p-menu_items
+      margin-top: 17px
+      > .c-flexbox_col9
+        margin-top: 17px
+      > .c-flexbox_col3
+        margin-top: 17px
+    .p-menu_passport
+      padding: 9px 19px 11px 17px
+      margin: 26px -19px 0 -16px
+      .p-menu_table
+        margin-top: 0
+      &:after
+      top: 0
+      right: 0
+    .p-menu_annotation
+      margin-top: 23px
+    & &_img
+      padding: 0
+      margin: 111px 0 0
+      img
+        width: 240px
