@@ -13,7 +13,7 @@
     "css:sass": "node-sass src/sass/ -o dist/css/ --output-style expanded --source-map true",
     "ejs": "ejs-cli -b src/ejs/ index.ejs -o dist/ --options ejs.config.json",
     "js": "run-s js:uglify js:concat",
-    "js:concat": "mkdirp dist/js && cat src/js/plugins/jquery-3.3.1.min.js src/js/plugins/swiper.min.js src/js/scripts.min.js > dist/js/scripts.min.js",
+    "js:concat": "mkdirp dist/js && cat src/js/plugins/jquery-3.3.1.min.js src/js/plugins/swiper.min.js src/js/plugins/scrolla.jquery.min.js src/js/scripts.min.js > dist/js/scripts.min.js",
     "js:uglify": "uglifyjs src/js/scripts.js -o src/js/scripts.min.js -m -c",
     "serve": "node_modules/http-server/bin/http-server dist/ -o",
     "start": "run-s build && run-p watch:* serve",

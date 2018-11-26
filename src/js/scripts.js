@@ -83,4 +83,8 @@ $(document).ready(function () {
     },
   });
 
+  $('.c-animimg').scrolla({
+    mobile: true,
+    once: true
+  });
 });
