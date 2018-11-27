@@ -54,9 +54,6 @@
           @if $i == 2 or $i == 3
             $gutter: 30px
             $width: 188px
-          @if $i == 4
-            $gutter: 30px
-            $width: 300px
           &:nth-child(#{$i}) > .c-flexbox
             margin: 0 (-$gutter / 2) (-$gutter)
             > .c-flexbox_col
@@ -83,9 +80,11 @@
       padding: 0 34px
       margin: 45px auto 0
       .c-tabs_toggles
+        box-sizing: border-box
         max-width: 400px
+        padding: 0 30px
         margin: 0 auto
-        justify-content: space-between
+        justify-content: space-around
         > .c-tabs_toggle
           font-size: 14px
           margin: 0

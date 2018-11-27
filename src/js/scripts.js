@@ -5,6 +5,19 @@ if (typeof Site === 'undefined') {
 
     var d = W.document;
 
+    S.getDevice = function() {
+      var ua = navigator.userAgent
+        , res = '';
+      if(ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
+        res = 'sp';
+      } else if(ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
+        res = 'tablet';
+      } else {
+        res = 'other';
+      }
+      return res;
+    };
+
     S.nav = function() {
       var nav_class = '.c-nav'
         , nav_items = '.c-nav_items'
@@ -55,7 +68,7 @@ if (typeof Site === 'undefined') {
         var speed = 400
           , href= $(this).attr('href')
           , target = $(href == '#' || href == '' ? 'html' : href)
-          , position = target.offset().top;
+          , position = target.offset().top - 70;
         $('body, html').animate({scrollTop:position}, speed, 'swing');
         return false;
       });
@@ -65,13 +78,18 @@ if (typeof Site === 'undefined') {
 }
 
 $(document).ready(function () {
-
-  Site.nav();
+  if(Site.getDevice() === 'other') {
+    $('nav > .c-nav').sticky({topSpacing:0});
+  } else {
+    Site.nav();
+  }
   Site.tabs();
   Site.anchorScroll();
+
   var mySwiper = new Swiper ('.swiper-container', {
     centeredSlides: true,
     loop: false,
+    speed: 1000,
     navigation: {
       prevEl: '.p-kodawari_swiperBtn-prev',
       nextEl: '.p-kodawari_swiperBtn-next',
@@ -82,9 +100,20 @@ $(document).ready(function () {
       disableOnInteraction: false,
     },
   });
+  mySwiper.autoplay.stop();
+
+  $(window).on('scroll.swiper', function() {
+    var t = $('.p-kodawari > .c-heading1').offset().top;
+    var p = t - $(window).height();
+    if($(window).scrollTop() > p) {
+      mySwiper.autoplay.start();
+      $(window).off('scroll.swiper');
+    }
+  });
 
   $('.c-animimg').scrolla({
     mobile: true,
     once: true
   });
+
 });

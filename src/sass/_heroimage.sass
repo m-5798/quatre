@@ -1,6 +1,7 @@
 .p-heroimage
   width: 100%
-  height: 746px
+  height: 100vh
+  // min-height: 746px
   background-image: url("/img/quatre_top.jpg")
   background-position: left top
   background-repeat: no-repeat
@@ -13,6 +14,7 @@
   .c-nav
     width: calc(100% - 81px)
     padding-top: 0
+    background-color: transparent
     display: block
     position: absolute
     top: 226px
@@ -55,8 +57,8 @@
     font-size: 19px
     display: inline-block
     position: absolute
-    top: 670px
     right: 82px
+    bottom: 82px
     a
       transition: opacity .3s ease-out
       color: #f2ebdf
@@ -97,7 +99,9 @@
 @media screen and (max-width: $breakPoint)
   .p-heroimage
     height: 100vh
-    background-position: center top
+    min-height: 100vh
+    background-image: url("/img/quatre_top_sp.jpg")
+    background-position: center center
     background-size: cover
     .c-logo
       width: 100%
