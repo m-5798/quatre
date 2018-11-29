@@ -68,7 +68,8 @@ if (typeof Site === 'undefined') {
         var speed = 400
           , href= $(this).attr('href')
           , target = $(href == '#' || href == '' ? 'html' : href)
-          , position = target.offset().top - 70;
+          , position = target.offset().top;
+        if($(target[0]).attr('id') !== 'start') position = position - 70;
         $('body, html').animate({scrollTop:position}, speed, 'swing');
         return false;
       });
