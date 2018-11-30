@@ -197,7 +197,6 @@
   .c-visible-sp
     display: none
 
-
 // SP
 @media screen and (max-width: $breakPoint)
   .c-nav
@@ -348,6 +347,25 @@
 
   .c-visible-pc
     display: none !important
+
+// IE11
+@media all and (-ms-high-contrast: none)
+  .c-nav ul > li
+    &:nth-child(1) > a > img
+      height: 9px
+    &:nth-child(2) > a > img
+      height: 6px
+    &:nth-child(3) > a > img
+      height: 7px
+    &:nth-child(4) > a > img
+      height: 9px
+    &:nth-child(5) > a > img
+      height: 7px
+    &:nth-child(6) > a > img
+      height: 7px
+  .c-heading1:after
+    top: calc(50% - 75px / 2)
+    left: calc(50% - 75px / 2)
 
 @media screen and (max-height: 440px)
   .c-nav .c-nav_items

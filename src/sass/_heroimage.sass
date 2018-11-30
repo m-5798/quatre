@@ -117,3 +117,19 @@
     .p-heroimage_sociallink,
     .p-heroimage_reservation
       display: none
+
+// IE11
+@media all and (-ms-high-contrast: none)
+  .p-heroimage .c-nav ul > li
+    &:nth-child(1) > a > img
+      height: 12px
+    &:nth-child(2) > a > img
+      height: 10px
+    &:nth-child(3) > a > img
+      height: 10px
+    &:nth-child(4) > a > img
+      height: 12px
+    &:nth-child(5) > a > img
+      height: 10px
+    &:nth-child(6) > a > img
+      height: 10px

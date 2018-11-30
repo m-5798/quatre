@@ -18,7 +18,7 @@
     "js": "run-s js:uglify js:concat",
     "js:concat": "mkdirp dist/js && cat src/js/plugins/jquery-3.3.1.min.js src/js/plugins/swiper.min.js src/js/plugins/scrolla.jquery.min.js src/js/plugins/jquery.sticky.js src/js/scripts.min.js > dist/js/scripts.min.js",
     "js:uglify": "uglifyjs src/js/scripts.js -o src/js/scripts.min.js -m -c",
-    "serve": "node_modules/http-server/bin/http-server dist/ -o",
+    "serve": "node_modules/http-server/bin/http-server dist/ -o -c-1",
     "start": "run-s build && run-p watch:* serve",
     "watch": "run-p watch:*",
     "watch:css": "chokidar src/sass/*.sass -c \"npm run css\"",
