@@ -37,119 +37,72 @@
     width: auto
     > .c-flexbox
       box-sizing: content-box
+      padding-left: 170px
       > .c-flexbox_col:nth-child(1)
-        font-size: 19px
         letter-spacing: 2px
         flex: 0 0 auto
         img,
         span
-          line-height: 1
+          text-align: center
+          margin: 0 auto
           display: block
+        img
+          margin-bottom: 20px
+        span
+          font-size: 19px
+          line-height: 1.3
       > .c-flexbox_col:nth-child(2)
+        width: 350px
+        margin-left: 85px
         h2
           font-family: $fontFamily_kozuka
           font-size: 19px
           letter-spacing: 2px
-          line-height: 1
+          line-height: 1.2
+          white-space: nowrap
           margin: 0
         p
           font-family: $fontFamily_kozuka
           font-size: 11px
-          line-height: 22px
+          line-height: 2
+          margin: 65px 0 0
       > .c-flexbox_col:nth-child(3)
+        margin-left: 85px
         flex: 0 0 auto
-    &:nth-child(1)
-      > .c-flexbox
-        width: 735px
-        padding-left: 132px
-        > .c-flexbox_col:nth-child(1)
-          img
-            margin: 0 0 24px 15px
-        > .c-flexbox_col:nth-child(2)
-          width: 349px
-          p
-            margin-top: 72px
-    &:nth-child(2)
-      > .c-flexbox
-        width: 774px
-        padding-left: 177px
-        > .c-flexbox_col:nth-child(1)
-          padding-top: 128px
-          span
-            margin: 24px 0 0 6px
-        > .c-flexbox_col:nth-child(2)
-          width: 400px
-          p
-            margin: 72px 50px 0 0
-        > .c-flexbox_col:nth-child(3)
-          padding-top: 81px
-    &:nth-child(3)
-      > .c-flexbox
-        width: 722px
-        padding-left: 156px
-        > .c-flexbox_col:nth-child(1)
-          img
-            margin: 0 0 25px 0
-        > .c-flexbox_col:nth-child(2)
-          width: 473px
-          p
-            margin: 72px 123px 0 0
-        > .c-flexbox_col:nth-child(3)
-          padding-top: 44px
+    &:nth-child(even) > .c-flexbox > .c-flexbox_col:nth-child(1) img
+      margin-top: 130px
+    &:nth-child(2) > .c-flexbox > .c-flexbox_col:nth-child(3) img
+      margin-top: 80px
+    &:nth-child(3) > .c-flexbox > .c-flexbox_col:nth-child(3) img
+      margin-top: 45px
     &:nth-child(4)
-      > .c-flexbox
-        width: 702px
-        padding-left: 107px
-        > .c-flexbox_col:nth-child(1)
-          padding-top: 115px
-          img
-            margin: 0 0 24px 11px
-          span
-            text-align: center
-            line-height: 25px
-        > .c-flexbox_col:nth-child(2)
-          width: 350px
-          p:nth-of-type(1)
-            margin-top: 72px
-          p:nth-of-type(2)
-            margin-top: 28px
-        > .c-flexbox_col:nth-child(3)
-          padding-top: 18px
+      > .c-flexbox > .c-flexbox_col
+        &:nth-child(2) p:nth-of-type(2)
+          margin-top: 28px
+        &:nth-child(3) img
+          margin-top: 20px
     &:nth-child(5)
-      > .c-flexbox
-        width: 785px
-        padding-left: 123px
-        > .c-flexbox_col:nth-child(1)
-          img
-            margin: 0 0 28px 34px
-          span
-            text-align: center
-            line-height: 25px
-        > .c-flexbox_col:nth-child(2)
-          width: 421px
-          h2
-            line-height: 23px
+      > .c-flexbox > .c-flexbox_col
+        &:nth-child(2)
           p:nth-of-type(1)
-            margin: 43px 71px 0 0
+            margin-top: 40px
           p:nth-of-type(2)
-            margin: 28px 71px 0 0
+            margin-top: 25px
           ul
             width: 205px
-            margin-top: 33px
+            margin-top: 30px
           li
             font-family: $fontFamily_kozuka
             font-size: 11px
             width: 50%
             margin-top: 13px
-            &:last-child
-              width: 100%
-        > .c-flexbox_col:nth-child(3)
-          padding-top: 18px
+        &:nth-child(3)
+          margin-left: 30px
   & &_img
     box-sizing: border-box
     width: 100%
     padding-left: calc(50% + 60px)
-    margin: 130px auto 0
+    margin: 50px auto 0
 
 // SP
 @media screen and (max-width: $breakPoint)
@@ -161,7 +114,7 @@
     & &_swiperBtn-next
       margin-left: 130px
     .swiper-container
-      margin-top: 48px
+      margin-top: 10px
     .swiper-wrapper
       margin-left: 0
     .swiper-slide
@@ -169,126 +122,61 @@
       width: 100%
       padding: 0 34px
       > .c-flexbox
-        max-width: 400px
-        margin: 0 auto
+        box-sizing: content-box
+        padding: 90px 0 0
         display: block
+        position: relative
         > .c-flexbox_col:nth-child(1)
-          font-size: 13px
           img,
           span
+            text-align: left
             display: inline-block
+          img
+            margin-bottom: 0
+          span
+            font-size: 14px
+            margin-left: 10px
         > .c-flexbox_col:nth-child(2)
+          width: 100%
+          margin-left: 0
           h2
             font-size: 11px
+            letter-spacing: 2px
             margin-top: 24px
-      &:nth-child(1)
-        > .c-flexbox
-          width: 100%
-          padding: 45px 0 0
-          > .c-flexbox_col:nth-child(1)
-            img
-              margin: 0 11px 0 0
-          > .c-flexbox_col:nth-child(2)
-            width: 100%
-            p
-              margin-top: 19px
-          > .c-flexbox_col:nth-child(3)
-            position: absolute
-            top: 0
-            right: 90px
-            img
-              width: 80px
-      &:nth-child(2)
-        > .c-flexbox
-          width: 100%
-          padding: 45px 0 0
-          > .c-flexbox_col:nth-child(1)
-            padding-top: 0
-            img
-              margin: 0 12px 0 0
-            span
-              margin: 0
-          > .c-flexbox_col:nth-child(2)
-            width: 100%
-            p
-              margin: 19px 0 0
-          > .c-flexbox_col:nth-child(3)
-            padding-top: 0
-            position: absolute
-            top: 0
-            right: 60px
-            img
-              width: 159px
-      &:nth-child(3)
-        > .c-flexbox
-          width: 100%
-          padding: 75px 0 0
-          > .c-flexbox_col:nth-child(1)
-            padding-top: 0
-            img
-              margin: 0 12px 0 0
-          > .c-flexbox_col:nth-child(2)
-            width: 100%
-            p
-              margin: 19px 0 0
-          > .c-flexbox_col:nth-child(3)
-            padding-top: 0
-            position: absolute
-            top: 0
-            right: 34px
-            img
-              width: 105px
-      &:nth-child(4)
-        > .c-flexbox
-          width: 100%
-          padding: 45px 0 0
-          > .c-flexbox_col:nth-child(1)
-            padding-top: 0
-            img
-              margin: 0 18px 0 0
-            span
-              text-align: left
-          > .c-flexbox_col:nth-child(2)
-            width: 100%
-            p:nth-of-type(1)
-              margin-top: 19px
-          > .c-flexbox_col:nth-child(3)
-            padding-top: 0
-            position: absolute
-            top: 0
-            right: 54px
-            img
-              width: 90px
+          p
+            margin-top: 20px
+        > .c-flexbox_col:nth-child(3)
+          margin-left: 0
+          flex: 0 0 auto
+          position: absolute
+          top: 0
+          right: 0
+      &:nth-child(even) > .c-flexbox > .c-flexbox_col:nth-child(1) img
+        margin-top: 0
+      &:nth-child(1) > .c-flexbox > .c-flexbox_col:nth-child(3) img
+        margin: 48px 55px 0 0
+      &:nth-child(2) > .c-flexbox > .c-flexbox_col:nth-child(3) img
+        margin: 48px 24px 0 0
+      &:nth-child(3) > .c-flexbox > .c-flexbox_col:nth-child(3) img
+        margin-top: 15px
+      &:nth-child(4) > .c-flexbox > .c-flexbox_col
+        &:nth-child(2) p:nth-of-type(2)
+          margin-top: 25px
+        &:nth-child(3) img
+          margin: 48px 20px 0 0
       &:nth-child(5)
-        > .c-flexbox
-          width: 100%
-          padding: 88px 0 0
-          > .c-flexbox_col:nth-child(1)
-            padding-top: 0
+        > .c-flexbox > .c-flexbox_col
+          &:nth-child(2) p:nth-of-type(1)
+            margin-top: 20px
+          &:nth-child(3)
+            margin-left: 0
             img
-              margin: 0 7px 0 0
-            span
-              text-align: left
-          > .c-flexbox_col:nth-child(2)
-            width: 100%
-            p:nth-of-type(1)
-              margin: 19px 0 0
-            p:nth-of-type(2)
-              margin: 20px 0 0
-            ul
-              margin-top: 35px
-          > .c-flexbox_col:nth-child(3)
-            padding-top: 0
-            position: absolute
-            top: 0
-            right: 64px
-            img
-              width: 166px
+              margin-left: 30px
     & &_img
       text-align: right
       max-width: 400px
       padding: 0
-      margin: 164px auto 0
+      margin: 50px auto 0
       img
         width: 240px
 

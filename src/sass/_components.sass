@@ -6,8 +6,6 @@
 
 .c-nav
   box-sizing: border-box
-  width: 100%
-  max-width: 1280px
   height: 38px
   padding-top: 7px
   margin: 0 auto
@@ -22,6 +20,7 @@
     ul
       font-size: 0
       margin: 0 auto
+      position: relative
     li
       display: inline-block
       &:nth-child(2)
@@ -36,12 +35,12 @@
         margin-left: 46px
       &:nth-child(7)
         position: absolute
-        top: 7px
-        right: 230px
+        top: 0
+        right: -120px
       &:nth-child(8)
         position: absolute
-        top: 9px
-        right: 68px
+        top: 0
+        right: -310px
         &:after
           content: ""
           transform: rotate(30deg)
@@ -54,8 +53,8 @@
           left: 20px
       &:nth-child(9)
         position: absolute
-        top: 9px
-        right: 26px
+        top: 0
+        right: -352px
     a
       transition: opacity .3s ease-out
       color: #000
@@ -256,7 +255,6 @@
       ul
         min-height: 410px
         margin-top: -70px
-        position: relative
       li
         text-align: center
         display: block
