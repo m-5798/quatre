@@ -37,6 +37,22 @@
         position: absolute
         top: 0
         right: -120px
+        a
+          position: relative
+          &:after
+            content: ""
+            width: 18px
+            height: 18px
+            background-color: #f4aa5a
+            border-radius: 50%
+            display: block
+            position: absolute
+            top: 2px
+            left: -10px
+          > span
+            display: inline
+            position: relative
+            z-index: 1
       &:nth-child(8)
         position: absolute
         top: 0
